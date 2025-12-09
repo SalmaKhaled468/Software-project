@@ -6,7 +6,7 @@ public class Patient extends User{
     private String emergencyContact;
     private List<Appointment> appointments;
     private List<EHR> ehrs;
-    private List<Preseptions> preseptions;
+    private List<Prescription> prescriptions;
     private List<Bill> bills;
     private List<Feedback> feedbacks;
 
@@ -20,14 +20,14 @@ public class Patient extends User{
     public Patient(int id, String name, String email, String contact,
                    String medicalHistory, String emergencyContact,
                    List<Appointment> appointments, List<EHR> ehrs,
-                   List<Preseptions> preseptions, List<Bill> bills,
+                   List<Prescription> prescriptions, List<Bill> bills,
                    List<Feedback> feedbacks) {
         super(id, name, email, contact);
         this.medicalHistory = medicalHistory;
         this.emergencyContact = emergencyContact;
         this.appointments = new ArrayList<Appointment>();
         this.ehrs = new  ArrayList<EHR>();
-        this.preseptions = new ArrayList<Preseptions>();
+        this.prescriptions = new ArrayList<Prescription>();
         this.bills = new ArrayList<Bill>();
         this.feedbacks = new ArrayList<Feedback>();
     }
@@ -64,12 +64,12 @@ public class Patient extends User{
         this.ehrs = ehrs;
     }
 
-    public List<Preseptions> getPreseptions() {
-        return preseptions;
+    public List<Prescription> getPrescriptions() {
+        return prescriptions;
     }
 
-    public void setPreseptions(List<Preseptions> preseptions) {
-        this.preseptions = preseptions;
+    public void setPrescriptions(List<Prescription> prescriptions) {
+        this.prescriptions = prescriptions;
     }
 
     public List<Bill> getBills() {
