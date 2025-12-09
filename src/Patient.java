@@ -11,6 +11,13 @@ public class Patient extends User{
     private List<Feedback> feedbacks;
 
     public Patient(int id, String name, String email, String contact,
+                   String medicalHistory, String emergencyContact) {
+        super(id, name, email, contact);
+        this.medicalHistory = medicalHistory;
+        this.emergencyContact = emergencyContact;
+    }
+
+    public Patient(int id, String name, String email, String contact,
                    String medicalHistory, String emergencyContact,
                    List<Appointment> appointments, List<EHR> ehrs,
                    List<Preseptions> preseptions, List<Bill> bills,
@@ -80,6 +87,5 @@ public class Patient extends User{
     public void setFeedbacks(List<Feedback> feedbacks) {
         this.feedbacks = feedbacks;
     }
-
 
 }
